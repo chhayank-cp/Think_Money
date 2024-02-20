@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THINK MONYE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="404" width="120" height="50" class="logo">
+        <h1>THINK MONEY</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home.html">Home</a></li>
+                <li><a href="#Equity.html">Assets</a></li>
+                <li><a href="#Gold.html">Reports</a></li>
+                <li><a href="#reports.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Home">
+            <h2>Welcome to Asset Management Web App</h2>
+            <p>This is where you can manage your assets efficiently.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add footer content here -->
+        <p>&copy; 2024 THINK MONEY. All rights reserved.</p>
+    </footer>
+
+    <!-- Quotes Container -->
+    <div id="quoteContainer">
+        <p id="quoteText">Loading...</p>
+    </div>
+
+
+    <!-- JavaScript for rotating quotes -->
+    <script>
+        const quotes = [
+            "The best way to predict the future is to create it. - Peter Drucker",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+            "Quality is not an act, it is a habit. - Aristotle"
+        ];
+
+        // Function to display a random quote
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quoteText").textContent = quotes[randomIndex];
+        }
+
+        // Display a random quote initially
+        displayRandomQuote();
+
+        // Update quote every 10 seconds
+        setInterval(displayRandomQuote, 10000);
+        
+// Get the quote container element
+const quoteContainer = document.getElementById('quoteContainer');
+
+// Add a click event listener to the quote container
+quoteContainer.addEventListener('click', function(event) {
+    // If the clicked element is the quote container itself
+    if (event.target === quoteContainer) {
+        // Hide the quote container
+        quoteContainer.style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>
