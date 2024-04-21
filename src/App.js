@@ -29,6 +29,7 @@ const App = () => {
     <div><Team/></div>
     <div><Login/></div>
     <div><Register/></div>
+
      */}
      </>
     

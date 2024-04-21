@@ -29,8 +29,25 @@ const Navbar = () => {
                 </li> 
             </ul>
         </div>
+        <div className='User'>
+           <ul className='User'>
+              <li>
+                <Link to="/Login">
+                  <button className='Login'>Login</button>
+                  </Link>
+              </li>
+              <li>
+                <Link to="/Register">
+                  <button className='Register'>Register</button>
+                  </Link>
+              </li>
+           </ul>
+        </div>
+
+
     </nav>
     
+      
     </>
   )
 }

@@ -1,12 +1,11 @@
-import React from "react";
-import Navbar from "./Navbar";
-const Advice = () => {
-    return(
-        <>
-        <Navbar/>
-        <h1> Advice dedo</h1>
-        </>
-    );
-};
+import React from 'react'
 
-export default Advice;
+const Advice = () => {
+  return (
+    <div>
+      Bhai ADvise dedo
+    </div>
+  )
+}
+
+export default Advice

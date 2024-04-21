@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Navbar from './Navbar';
+import "./Gold.css";
 
 const Gold = () => {
   const [rows, setRows] = useState([
@@ -9,23 +10,23 @@ const Gold = () => {
   const [nextId, setNextId] = useState(2);
   const [totalReturns, setTotalReturns] = useState(0);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('YOUR_API_ENDPOINT');
-        const currentPrice = response.data.currentPrice;
-        setRows(prevRows => {
-          const updatedRows = [...prevRows];
-          updatedRows[0].currentPrice = currentPrice;
-          return updatedRows;
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('YOUR_API_ENDPOINT');
+  //       const currentPrice = response.data.currentPrice;
+  //       setRows(prevRows => {
+  //         const updatedRows = [...prevRows];
+  //         updatedRows[0].currentPrice = currentPrice;
+  //         return updatedRows;
+  //       });
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const handleAddRow = () => {
     setRows([
@@ -60,8 +61,12 @@ const Gold = () => {
   return (
     <>
     <Navbar/>
-    <div>
-      <table>
+    <div className='hgold'>
+      <h1>Gold</h1>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div>
+      <table className='gold-table'>
         <thead>
           <tr>
             <th>Date</th>
@@ -119,7 +124,8 @@ const Gold = () => {
           </tr>
         </tbody>
       </table>
-      <button onClick={handleAddRow}>Add Row</button>
+      <button className="addgold-button" onClick={handleAddRow}>Add Row</button>
+    </div>
     </div>
     </>
   );
