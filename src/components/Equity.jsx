@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Assuming you're using Axios for making API requests
+import Navbar from './Navbar';
 
-const ResponsiveTable = () => {
+const Equity = () => {
   const [rows, setRows] = useState([
     { id: 1, date: '', stockName: '', purchasePrice: '', quantity: '', currentPrice: '' }
   ]);
@@ -65,6 +66,8 @@ const ResponsiveTable = () => {
   }, [rows]);
 
   return (
+    <>
+    <Navbar/>
     <div>
       <table>
         <thead>
@@ -128,7 +131,8 @@ const ResponsiveTable = () => {
       </table>
       <button onClick={handleAddRow}>Add Row</button>
     </div>
+    </>
   );
 };
 
-export default ResponsiveTable;
+export default Equity;

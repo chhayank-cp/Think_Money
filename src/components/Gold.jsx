@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 const Gold = () => {
   const [rows, setRows] = useState([
@@ -57,6 +58,8 @@ const Gold = () => {
   }, [rows]);
 
   return (
+    <>
+    <Navbar/>
     <div>
       <table>
         <thead>
@@ -118,6 +121,7 @@ const Gold = () => {
       </table>
       <button onClick={handleAddRow}>Add Row</button>
     </div>
+    </>
   );
 };
 
