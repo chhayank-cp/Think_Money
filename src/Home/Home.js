@@ -1,8 +1,8 @@
 import React, { useState} from 'react'
-import "./Home.css"
-import Navbar from './Navbar'
-import twitterIcon from '../components/Assets/twitter.png'
-import reloadIcon from '../components/Assets/reload.png'
+import "./Home.css";
+import Navbar from '../Navbar/Navbar'
+import twitterIcon from './Assets/twitter.png'
+import reloadIcon from './Assets/reload.png'
 
 function Home(){
 

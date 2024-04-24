@@ -1,9 +1,14 @@
 import React from 'react'
 
 const Advice = () => {
+  
+  const getNews =() => {
+    fetch("")
+  }
+  
   return (
     <div>
-      Bhai ADvise dedo
+      
     </div>
   )
 }

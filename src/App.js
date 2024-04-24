@@ -1,14 +1,14 @@
 import React from 'react';
-import Home from "./components/Home";
-import {Route} from "react-router-dom";
+import Home from "./Home/Home";
+import {Route, Router} from "react-router-dom";
 import { Routes } from "react-router-dom";
-import Investment from './components/Investment';
-import Advice from './components/Advice';
-import Team from './components/Team';
-import Login from './components/Login';
-import Register from './components/Register';
-import Equity from './components/Equity';
-import Gold from './components/Gold';
+import Investment from './Investment/Investment';
+import Advice from './Advice/Advice';
+import Team from './Team/Team';
+import Login from './Login_register/Login';
+import Register from './Login_register/Register';
+import Equity from './Equity/Equity';
+import Gold from './Gold/Gold';
 
 const App = () => {
   return (
@@ -21,6 +21,8 @@ const App = () => {
         <Route path='/team' Component={Team} />
         <Route path='/equity' Component={Equity}/>
         <Route path='/gold' Component={Gold}/>
+        <Route path="/login" Component={Login}/>
+        <Route path='/register' Component={Register}/>
       </Routes>
 {/*     
     <div><Home/></div>
